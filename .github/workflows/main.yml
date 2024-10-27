@@ -26,4 +26,4 @@ jobs:
 
     - name: Build Tracy
       run: |
-        gradlew jar
+        ./gradlew jar
