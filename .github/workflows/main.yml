@@ -31,3 +31,9 @@ jobs:
     - name: Build Tracy
       run: |
         ./gradlew jar
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: tracy-binding-${{ matrix.os }}-${{ matrix.arch }}
+        path: tracy-jni/build/lib/main/release
